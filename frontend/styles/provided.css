@@ -1,0 +1,113 @@
+/* base styles, feel free to edit */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  font-family: -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-wrapper {
+  max-width: 300px;
+}
+
+.form-container {
+  height: 100vh;
+}
+
+form .form-floating:focus-within {
+  z-index: 2;
+}
+
+form .input-top {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+form .input-middle {
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+
+form .input-bottom {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.page-block {
+  display: none;
+  height: 100dvh;
+}
+
+.btn-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: .25rem .5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, .65);
+  background-color: transparent;
+  border: 0;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+  color: rgba(0, 0, 0, .85);
+  background-color: #d2f4ea;
+}
+
+.btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url(
+    "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e"
+  );
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: rgba(0, 0, 0, .85);
+}
+
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.side-nav {
+  width: 250px;
+  height: 100%;
+}
+
+#channel-lock,
+#channel-block,
+#close-input-image,
+#close-edit-message-image {
+  display: none;
+}
+
+#toggle-navbar {
+  margin-left: 250px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+.carousel-inner .carousel-item img {
+  height: 400px;
+  max-width: auto;
+}
+
+img {
+  object-fit: contain;
+}
+
+@media screen and (max-width: 850px) {
+  #navbar {
+    position: absolute;
+    height: 100%;
+    z-index: 2;
+  }
+}
